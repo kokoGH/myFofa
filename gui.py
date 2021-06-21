@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import findFofa
 import tkinter
 from tkinter import ttk
@@ -82,7 +83,7 @@ class guiCommand():
 
 	def save(self):
 		s = entry_page.get()
-		# print(s)
+		print(s)
 
 	def setProxy(self):
 		try:
