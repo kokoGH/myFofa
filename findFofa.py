@@ -81,7 +81,7 @@ class Go():
 		'''
 		错误代码：
 			-1:网络错误或封IP
-			-2：search.get_data error
+			-2：超时
 		'''
 		try:
 			search = pyfofa.FofaAPI(self.email, self.key)
@@ -90,7 +90,10 @@ class Go():
 
 		# for host, ip in search.get_data('cert="baidu.com"', 1, "host,ip")['results']:
 		#     print(host, ip)
-		r = search.get_data(self.search,page,'host,ip,port,protocol,title')
+		try:
+			r = search.get_data(self.search,page,'host,ip,port,protocol,title')
+		except:
+			return -2
 
 		return r
 		# for i in r:

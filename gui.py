@@ -31,6 +31,8 @@ class guiCommand():
 		if response == -1:
 			tkinter.messagebox.showinfo('network error','请检查网络，被封IP请添加代理')
 			return 0
+		elif response == -2:
+			tkinter.messagebox.showinfo('network error','timeout')
 		if response['error']:
 			tkinter.messagebox.showinfo('fofa error',response['errmsg'])
 			return 0
