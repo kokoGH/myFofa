@@ -3,6 +3,10 @@ import configparser
 import socket
 import socks
 import tkinter.messagebox
+import os
+import sys
+
+os.chdir(os.path.dirname(sys.path[0]))
 
 
 class Go():
